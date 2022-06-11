@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1"
+    />
+    <title>i2c-VL53L0X</title>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="node_modules/@chirimen-raspi/polyfill/polyfill.js"></script>
+    <script src="https://r.chirimen.org/relayserver.js"></script>
+    <script src="node_modules/@chirimen/vl53l0x/index.js"></script>
+    <script src="https://r.chirimen.org/polyfill.js"></script>
+    <script src="./main.js" defer></script>
+    <style>
+      body {
+        background-color: cornflowerblue;
+      }
+      table,
+      p {
+        color: rgb(112, 223, 195);
+        text-align: center;
+        font-size: 24px;
+      }
+
+      /* img {
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <p id="head">How long do you sit?</p>
+    <!-- <img src="schematic.png" width="400" /> -->
+    <table>
+      <tr>
+        <td>Distance [mm]</td>
+        <td id="dist"></td>
+      </tr>
+      <tr>
+        <td>Alert</td>
+        <td id="alert"></td>
+      </tr>
+      <tr>
+        <td><p id="used">使用中</p></td>
+      </tr>
+      <tr id="you">
+        <td><p id="sit">着席中</p></td>
+        <td><p id="stand">離席中</p></td>
+      </tr>
+
+      <p id="PassageArea_sit">一回の着席時間</p>
+      <p id="PassageArea_stand">一回の離席時間</p>
+      <!-- <input type="button" onclick="free()" value="FREE"></input>
+      <input type="button" onclick="fwd()" value="FOWARD"></input>
+      <input type="button" onclick="rev()" value="REVERSE"></input>
+      <input type="button" onclick="brake()" value="BRAKE"></input> -->
+    </table>
+  </body>
+</html>

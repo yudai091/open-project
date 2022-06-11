@@ -1,0 +1,14 @@
+{
+  "name": "open-project-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@chirimen/vl53l0x": "latest",
+    "@chirimen-raspi/polyfill": "latest",
+    "axios": "^0.16.2",
+    "querystring": "^0.2.0"
+  },
+  "keywords": [],
+  "description": "",
+  "main": "main.js"
+}
